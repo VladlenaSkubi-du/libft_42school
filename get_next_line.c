@@ -6,11 +6,11 @@
 /*   By: sschmele <sschmele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/28 20:33:00 by sschmele          #+#    #+#             */
-/*   Updated: 2019/10/02 14:24:38 by sschmele         ###   ########.fr       */
+/*   Updated: 2019/11/12 16:21:26 by sschmele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "includes/get_next_line.h"
 
 static int				next_buf(char *content)
 {
@@ -88,8 +88,8 @@ int						get_next_line(const int fd, char **line)
 {
 	static t_list		*first_list;
 	t_list				*list;
-
-	if (line == NULL || (read(fd, NULL, 0) < 0))
+	
+	if (fd < 0 || line == NULL || (read(fd, NULL, 0) < 0))
 		return (-1);
 	list = first_list;
 	while (list)
