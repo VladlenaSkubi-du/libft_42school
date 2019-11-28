@@ -31,8 +31,8 @@ char		*ft_strchr(const char *s, int c)
 		++end;
 	}
 	iter = (size_t *)end;
-	while ((*iter - mask & ~(*iter) & 0x8080808080808080) == 0 &&
-			(*iter - 0x0101010101010101 & ~(*iter) & 0x8080808080808080) == 0)
+	while (((*iter - mask) & ~(*iter) & 0x8080808080808080) == 0 &&
+			((*iter - 0x0101010101010101) & ~(*iter) & 0x8080808080808080) == 0)
 		iter++;
 	end = (unsigned char *)iter;
 	while (*end && *end != (unsigned char)c)
