@@ -24,7 +24,7 @@ size_t			ft_strlen(const char *s)
 		if (!(*end++))
 			return (end - (unsigned char *)s - 1);
 	iter = (size_t *)end;
-	while ((*iter - 0x0101010101010101 & ~(*iter) & 0x8080808080808080) == 0)
+	while (((*iter - 0x0101010101010101) & ~(*iter) & 0x8080808080808080) == 0)
 		iter++;
 	end = (unsigned char *)iter;
 	while (*end)

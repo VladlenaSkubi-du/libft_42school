@@ -33,10 +33,8 @@ static int				check(char *content, char **line)
 {
 	char				*p;
 	char				flag;
-	int					i;
 
 	flag = 0;
-	i = 0;
 	if (ft_strlen(content) > 0)
 	{
 		if (content[0] == '\n')

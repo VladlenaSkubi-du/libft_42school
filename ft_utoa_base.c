@@ -32,12 +32,12 @@ char		*ft_utoa_base(unsigned long nb, int base)
 	int		i;
 	char	*str;
 	int		len;
-	char	*main;
+	char	*core;
 
 	if (!nb && !base && !(base >= 2 && base <= 16))
 		return (NULL);
 	i = 0;
-	main = "0123456789ABCDEF";
+	core = "0123456789ABCDEF";
 	len = count_digits_u(nb, base);
 	if (!(str = ft_strnew(len)))
 		return (NULL);
@@ -45,7 +45,7 @@ char		*ft_utoa_base(unsigned long nb, int base)
 		str[0] = 0 + '0';
 	while (nb)
 	{
-		str[len - ++i] = main[nb % base];
+		str[len - ++i] = core[nb % base];
 		nb /= base;
 	}
 	return (str);
