@@ -6,7 +6,7 @@
 /*   By: sschmele <sschmele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/30 14:18:52 by sschmele          #+#    #+#             */
-/*   Updated: 2019/09/21 21:54:01 by sschmele         ###   ########.fr       */
+/*   Updated: 2020/01/09 16:52:54 by sschmele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char		*ft_strtrim(char const *s)
 	i = 0;
 	len = 0;
 	str = 0;
-	if (!s)
+	if (!s || s[0] == '\0')
 		return (NULL);
 	while (*s && (*s == ' ' || *s == '\n' || *s == '\t'))
 		s++;
