@@ -6,7 +6,7 @@
 #    By: sschmele <sschmele@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/04 16:34:17 by sschmele          #+#    #+#              #
-#    Updated: 2019/10/23 17:14:53 by sschmele         ###   ########.fr        #
+#    Updated: 2020/03/02 18:53:04 by sschmele         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -103,12 +103,12 @@ INCLUDE = includes/libft.h
 all:	$(NAME)
 
 $(NAME):	$(OBJS)
-	@echo "\x1b[32;01mCompiling libft...\x1b[0m"
+	@echo "\033[32;01mCompiling libft...\033[0m"
 	@make -C ./ft_printf
 	@cp ft_printf/libftprintf.a $(NAME)
 	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
-	@echo "\x1b[32;01mLibft.a is ready.\x1b[0m"
+	@echo "\033[32;01mLibft.a is ready.\033[0m"
 
 $(OBJS):	$(DIR_O)/%.o: %.c $(INCLUDE)
 	@mkdir -p $(DIR_O)
