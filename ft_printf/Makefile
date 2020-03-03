@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sschmele <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: sschmele <sschmele@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/23 17:15:13 by sschmele          #+#    #+#              #
-#    Updated: 2019/10/23 17:16:07 by sschmele         ###   ########.fr        #
+#    Updated: 2020/03/03 13:00:16 by sschmele         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,9 +41,9 @@ OBJS = $(addprefix $(DIR_O)/,$(SOURCES:.c=.o))
 all:	$(NAME)
 
 $(NAME):	$(OBJS)
-	@echo "\x1b[32;01mCompiling ft_printf...\x1b[0m"
+	@echo "\033[32;01mCompiling ft_printf...\033[0m"
 	@ar rc $(NAME) $(OBJS)
-	@echo "\x1b[32;01mLibftprintf.a is ready.\x1b[0m"
+	@echo "\033[32;01mLibftprintf.a is ready.\033[0m"
 
 $(OBJS):	$(DIR_O)/%.o: $(DIR_S)/%.c includes/ft_printf.h includes/libft.h
 	@mkdir -p $(DIR_O)
