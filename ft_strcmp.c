@@ -6,15 +6,15 @@
 /*   By: sschmele <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/21 12:04:33 by sschmele          #+#    #+#             */
-/*   Updated: 2020/03/04 15:12:34 by sschmele         ###   ########.fr       */
+/*   Updated: 2020/03/04 15:14:58 by sschmele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strcmp(const char *s1, const char *s2)
+int			ft_strcmp(const char *s1, const char *s2)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (!s1 || !s2)
